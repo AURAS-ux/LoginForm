@@ -1,0 +1,111 @@
+﻿<Window x:Class="LoginForm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginForm"
+        mc:Ignorable="d"
+        Height="450" Width="800"
+        WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent"
+        Icon="D:\c#\LoginForm\LoginForm\Icons\favicon.ico" MouseDown="Window_MouseDown"
+        >
+    <Border CornerRadius="8" Background="#212345">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+
+            <TextBlock Text="WPF Login Form" 
+                       Grid.Row="0" Grid.Column="0"
+                       Grid.ColumnSpan ="2"
+                       FontSize="20"
+                       Foreground="White"
+                       FontFamily="D:\c#\LoginForm\LoginForm\Fonts\Poppins-Thin.ttf"
+                       Margin="10,15,0,0"/>
+
+            <StackPanel HorizontalAlignment="Right" 
+                        Orientation="Horizontal"
+                        Grid.Row="0" Grid.Column="1">
+                <Button x:Name="minimizeButton" Content="_" Width="30"
+                        Height="30" Background="Transparent" Foreground="Wheat"
+                        Margin="5" Click="minimizeButton_Click"/>
+                <!--<Button x:Name="maximizeButton" Content="▢" Width="30"
+                        Height="30" Background="Transparent" Foreground="Wheat"
+                        Margin="5" Click="maximizeButton_Click"/>-->
+                <Button x:Name="closeButton" Content="🞨" Width="30"
+                        Height="30" Background="Transparent" Foreground="Wheat"
+                        Margin="5" Click="closeButton_Click"/>
+
+            </StackPanel>
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="86.399"/>
+                    <RowDefinition Height="13.601"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock FontSize="30" Grid.ColumnSpan="2"
+                           Foreground="White"
+                           Margin="50,20,0,0"
+                           FontFamily="\Fonts\Poppins-Thin.ttf">
+                    Welcome,please insert <LineBreak />
+                    your:
+                </TextBlock>
+
+                <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Grid.Row="1" Grid.Column="1"
+                        Height="50" Width="200" 
+                        Background="Transparent"
+                        Foreground="White"
+                        FontSize="30"
+                        FontFamily="\Fonts\Poppins-Thin.ttf"
+                        Click="loginButton_Click" Margin="0,25,0,0"/>
+                <TextBlock x:Name="testLabel" Text="Username:" FontSize="30" 
+                           Margin="50,140,0,0" Foreground="White"
+                           FontFamily="\Fonts\Poppins-Thin.ttf"/>
+                <TextBox x:Name="usernameField" Grid.Column="1" 
+                         Height="40" Width="280"
+                         Margin="0,148,95,112"
+                         FontSize="30"/>
+                <TextBlock Text="Password:" FontSize="30" 
+                           Margin="50,210,0,0" Foreground="White"
+                           FontFamily="\Fonts\Poppins-Thin.ttf"/>
+                <PasswordBox x:Name="passwordField" Grid.Column="1" 
+                         Height="40" Width="280"
+                         Margin="0,210,95,50"
+                         FontSize="30"/>
+                <TextBlock Text=""  Grid.Row="0" Grid.Column="1" 
+                           FontSize="15" Foreground="#B1044F"
+                           HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                           Margin="0,0,30,10" x:Name="erroeLabel"/>
+                <TextBlock Text="© AURAS" FontSize="15" 
+                           Grid.Column="1" Grid.Row="1"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom" Margin="0,0,10,10"
+                           Foreground="White" Grid.RowSpan="2"/>
+            </Grid>
+            <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1"
+                        VerticalAlignment="Bottom" Margin="0,0,0,10">
+                <Button x:Name="facebookContact" Height="30"
+                        Width="30" Content="Ⓕ"
+                        FontSize="25" Background="Transparent"
+                        Foreground="White" FontFamily="\Fonts\Poppins-Thin.ttf"
+                        Click="facebookContact_Click"
+                        />
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
